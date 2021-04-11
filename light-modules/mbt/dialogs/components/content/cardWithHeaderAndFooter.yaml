@@ -4,14 +4,22 @@ form:
     - name: body
       fields:
         - !include:/mbt/includes/dialogs/fields/titleField.yaml
+          name: title
+          lablel: title
+        - !include:/mbt/includes/dialogs/fields/titleField.yaml
+          name: cardsubtitle
+          label: cardsubtitle
         - !include:/mbt/includes/dialogs/fields/alignmentField.yaml
           name: alignmentBody
         - !include:/mbt/includes/dialogs/fields/richTextField.yaml
         - !include:/mbt/includes/dialogs/fields/linkSwitchableField.yaml
         - !include:/mbt/includes/dialogs/fields/linkTextField.yaml
+        - !include:/mbt/includes/dialogs/fields/imageField.yaml
+          label: img
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
           label: link.color
         - !include:/mbt/includes/dialogs/fields/themeField.yaml
+          name: theme
     - name: header
       fields:
         - !include:/mbt/includes/dialogs/fields/titleField.yaml

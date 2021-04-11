@@ -10,52 +10,48 @@
 <style>
 
 /* CEO Card */
-div.theme1{
-position: absolute;
-width: 556px;
-height: 265px;
-left: 102px;
-top: 1391px;
+.card.theme1{
+border-radius: 40px;
+background: #EDEDED;
+padding: 20px;
+font: Roboto;
 }
 
 /* Rectangle 9 */
-.theme1 > div{
-position: absolute;
-width: 556px;
-height: 265px;
-left: 102px;
-top: 1391px;
-background: #EDEDED;
-border-radius: 40px;
+.theme1 > .carddiv{
+background: transparent;
+border:None;
+padding:0;
 }
 
 /* Sundar Pichai */
-.theme1 > h5{
-position: absolute;
-width: 250px;
-height: 48px;
-left: 135px;
-top: 1434px;
+.card.theme1> .card-header{
+color: #7A8FFF;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 30px;
 line-height: 40px;
+letter-spacing: 0.05em;
+
+}
+
+.theme1> .card-body > .cardh3{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+color: #A8A8A8;
+line-height: 40px;
 
 /* or 133% */
 
 letter-spacing: 0.05em;
-color: #7A8FFF;
 }
 
 
 /* “Wear your failures as a badge of honor.” */
-.theme1 > p{
-position: absolute;
-width: 290px;
-height: 87px;
-left: 135px;
-top: 1546px;
+.theme1 > .card-body > .cardp{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -68,13 +64,7 @@ letter-spacing: 0.05em;
 color: #9D9D9D;
 }
 
-.theme1 > img{
-position: absolute;
-width: 187px;
-height: 224px;
-left: 123px;
-top: 1535px;
-
+.theme1 > .cardimg{
 background: url(image.png);
 border-radius: 18px;
 }
@@ -82,67 +72,57 @@ border-radius: 18px;
 
 
 /* CEO Card */
-div.theme2{
-position: absolute;
-width: 556px;
-height: 265px;
-left: 102px;
-top: 1514px;
+.card.theme2{
+border-radius: 40px;
+background: #0A142F;
+padding: 20px;
+font: Roboto;
 }
 
 
 
 /* Rectangle 9 */
-.theme2 > div{
-position: absolute;
-width: 556px;
-height: 265px;
-left: 102px;
-top: 1514px;
+.theme2 > .carddiv{
 
-background: #0A142F;
+background: transparent;
 border-radius: 40px;
 }
 
 
 /* Sundar Pichai */
-.theme2 > h5{
-position: absolute;
-width: 250px;
-height: 48px;
-left: 333px;
-top: 1550px;
-
+.card.theme2> .card-header{
+color: #FFFFFF;
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 30px;
 line-height: 40px;
-/* or 133% */
 letter-spacing: 0.05em;
 
-color: #FFFFFF;
+}
+
+.theme2> .card-body > .cardh3{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+color: #A8A8A8;
+line-height: 40px;
+
+/* or 133% */
+
+letter-spacing: 0.05em;
 }
 
 
-
-
 /* “Wear your failures as a badge of honor.” */
-.theme2 > p{
-position: absolute;
-width: 290px;
-height: 87px;
-left: 333px;
-top: 1670px;
-
+.theme2 > .card-body > .cardp{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 30px;
-/* or 167% */
 letter-spacing: 0.05em;
-
 color: #9D9D9D;
 }
 
@@ -150,11 +130,6 @@ color: #9D9D9D;
 
 /* image 4 */
 .theme2 >img{
-position: absolute;
-width: 187px;
-height: 224px;
-left: 123px;
-top: 1535px;
 
 background: url(image.png);
 border-radius: 18px;
@@ -164,29 +139,28 @@ border-radius: 18px;
 
 
 
-<div class="card  mt-${marginTop} mb-${marginBottom}">
+<div class="card ${content.theme}  mt-${marginTop} mb-${marginBottom}">
 
     [#if content.headerText?has_content]
-    <div class="${content.theme}">
-        ${content.theme}
-    </div>
-        <div class="card-header text-${alignment} ">
+        <div class="card-header text-${alignment} carddiv">
         ${content.headerText!}
         </div>
     [/#if]
-    <div class="card-body text-${alignmentBody} ">
-        <h5 class="card-title">${content.titleOne!}</h5>
-        <p class="card-text">${paraText!}</p>
+    <div class="card-body text-${alignmentBody} carddiv">
+
+        [#if content.cardsubtitle?has_content]<h3 class="card-subtitle cardh3">${content.cardsubtitle}</h3>[/#if]
+        <div class="card-text cardp">${paraText!} </div>
         [#if hrefValue?has_content]
         <a href="${hrefValue}" class="btn btn-${content.color!}">${linkText}</a>
         [/#if]
     </div>
     [#if content.footerText?has_content]
-    <div class="card-footer text-muted text-${alignmentFooter} ">
+    <div class="card-footer text-muted text-${alignmentFooter} carddiv">
        ${content.footerText!}
     </div>
     <div class="img">
-    <img class="${content.img}"</img>
+    <img class="${content.img} cardimg" />
+    <script>console.log(${content.img})</script>
     </div>
     [/#if]
 </div>

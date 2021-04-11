@@ -1,0 +1,29 @@
+form:
+  tabs:
+    - name: tabHeading
+      label: mbt.templates.components.content.heading
+      fields:
+        - !include:/mbt/includes/dialogs/fields/titleField.yaml
+          - name: title
+        - !include:/mbt/includes/dialogs/fields/themeField.yaml
+        - !include:/mbt/includes/dialogs/fields/headingSizeField.yaml
+        - !include:/mbt/includes/dialogs/fields/alignmentField.yaml
+        - !include:/mbt/includes/dialogs/fields/richTextField.yaml
+        - !include:/mbt/includes/dialogs/fields/containerWidthField.yaml
+          options:
+            - name: noContainer
+              value: ""
+              label: No container
+              selected: true
+        - !include:/mbt/includes/dialogs/fields/themeField.yaml
+    - name: tabBadge
+      fields:
+        - !include:/mbt/includes/dialogs/fields/titleField.yaml
+          name: badgeText
+          label: mbt.components.content.heading.tabTwo.badgeText.label
+        - !include:/mbt/includes/dialogs/fields/colorField.yaml
+          name: badgeColor
+    - !include:/mbt/includes/dialogs/tabs/spacingTab.yaml
+actions:
+  !include:/mbt/includes/dialogs/defaultActions.yaml
+

@@ -38,6 +38,8 @@ content:
       id: mbt:components/content/cardWithHeaderAndFooter
     heading:
       id: mbt:components/content/heading
+    title:
+      id: mbt:components/content/title
     linkGroup:
       id: mbt:components/content/linkGroup
     tabsContainer:

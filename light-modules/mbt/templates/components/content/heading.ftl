@@ -4,14 +4,14 @@
 [#assign headingLevel = content.headingType!"1"/]
 
 <style>
-div.theme1{
+.heading.theme1{
     background-color: transparent;
     color: #ACACAC;
     text-align: center;
     font: Roboto;
 }
 
-.theme1 > h2 {
+.theme1 > .headingh2 {
     font-weight: 100;
     font-size: 36px;
     text-decoration: underline 2px;
@@ -19,7 +19,7 @@ div.theme1{
     text-underline-offset: 5px;
 }
 
-.theme1 > div {
+.theme1 > .headingdiv {
     font-size: 24px;
     font-weight:200;
     padding-top: 2%;
@@ -28,7 +28,7 @@ div.theme1{
     word-spacing:2px;
 }
 
-div.theme2{
+.heading.theme2{
     background-color: transparent;
     color: #ACACAC;
     text-align: center;
@@ -37,7 +37,7 @@ div.theme2{
     height:50vh;
 }
 
-div.theme2 > h2 {
+.theme2 > .headingh2 {
    position: absolute;
    font-size: 200px;
    top: 0;
@@ -51,7 +51,7 @@ div.theme2 > h2 {
    text-transform: uppercase;
 }
 
-div.theme2 > div {
+.theme2 > .headingdiv {
     font-size:30px;
     color: #797979;
     top: 30%;
@@ -69,9 +69,9 @@ div.theme2 > div {
 <div class="${content.containerWidth!""} mt-${marginTop} mb-${marginBottom}">
 ${borderTop?then("<hr/>","")}
     [#if content.title?has_content]
-        <div class="row text-${content.alignment!} ${content.theme}">
-            <h2 class="col-12">${content.title!}[#if badgeText?has_content]<span class="badge badge-${content.color!} ml-1">${badgeText!}</span>[/#if]</h${headingLevel!}>
-            [#if content.text?has_content]<div class="col-12"> ${cmsfn.decode(content).text!}</div>[/#if]
+        <div class="heading row text-${content.alignment!} ${content.theme}">
+            <h2 class="headingh2 col-12">${content.title!}[#if badgeText?has_content]<span class="badge badge-${content.color!} ml-1">${badgeText!}</span>[/#if]</h${headingLevel!}>
+            [#if content.text?has_content]<div class="col-12 headingdiv"> ${cmsfn.decode(content).text!}</div>[/#if]
         </div>
     [/#if]
 ${borderBottom?then("<hr/>","")}
