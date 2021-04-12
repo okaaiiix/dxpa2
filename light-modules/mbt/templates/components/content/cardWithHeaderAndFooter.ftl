@@ -7,10 +7,7 @@
 [#include "/mbt/templates/macros/linksSwitchable.ftl"]
 [#assign imgItemKey = content.image!/]
 [#if imgItemKey?has_content]
-    [#assign imgAsset = damfn.getAsset(imgItemKey)!/]
-    [#if imgAsset?has_content]
-        [#assign assetRend = damfn.getRendition(imgAsset, "1600")/]
-    [/#if]
+    [#assign asset = damfn.getAsset(imgItemKey)!/]
 [/#if]
 [@assignLink content "linkType"/]
 <style>
@@ -70,9 +67,12 @@ letter-spacing: 0.05em;
 color: #9D9D9D;
 }
 
-.theme1 > .cardimg{
+.card.theme1 > .carddiv > .cardImage{
 background: url(image.png);
 border-radius: 18px;
+width: 215px;
+height: 215px;
+display: block;
 }
 
 
@@ -153,24 +153,19 @@ border-radius: 18px;
         </div>
     [/#if]
     <div class="card-body text-${alignmentBody} carddiv">
-
         [#if content.cardsubtitle?has_content]<h3 class="card-subtitle cardh3">${content.cardsubtitle}</h3>[/#if]
         <div class="card-text cardp">${paraText!} </div>
         [#if hrefValue?has_content]
         <a href="${hrefValue}" class="btn btn-${content.color!}">${linkText}</a>
         [/#if]
+        [#if asset?has_content]
+        [#assign assetRend = damfn.getRendition(asset, "240x180")/]
+            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}">
+        [/#if]
     </div>
     [#if content.footerText?has_content]
     <div class="card-footer text-muted text-${alignmentFooter} carddiv">
        ${content.footerText!}
-    </div>
-
-    [#if asset??]
-        [#assign assetRend = damfn.getRendition(asset, "240x180")/]
-      <img class="" src="${assetRend.link}" alt=" ${asset.title!}">
-    [/#if]
-[/#if]
-    <script>console.log(${content.img})</script>
     </div>
     [/#if]
 </div>

@@ -11,6 +11,7 @@ form:
         - !include:/mbt/includes/dialogs/fields/linkTextField.yaml
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
           label: field.link.color
+        - !include:/mbt/includes/dialogs/fields/themeField.yaml
     - name: tabStyle
       label: tabs.tabStyle
       fields:
