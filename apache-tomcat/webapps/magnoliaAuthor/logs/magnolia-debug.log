@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INFO  info.magnolia.dirwatch.DirectoryWatcher 12.04.2021 05:14:49 -- File resource modified at [C:\Users\Admin\Documents\GitHub\dxpa2\apache-tomcat\webapps\magnoliaAuthor\..\..\..\light-modules\mbt\templates\components\content\title.ftl]
 INFO  info.magnolia.dirwatch.DirectoryWatcher 12.04.2021 05:14:49 -- File resource modified at [C:\Users\Admin\Documents\GitHub\dxpa2\apache-tomcat\webapps\magnoliaAuthor\..\..\..\light-modules\mbt\templates\components\content\title.ftl]
 WARN  info.magnolia.ui.framework.ioc.UiComponentProvider 12.04.2021 05:14:54 -- Attempted to cache a UIComponent (PageDetailSubApp) instance in bean store containing another UIComponent (View)
@@ -8790,3 +8791,5 @@ INFO  info.magnolia.module.ModuleManagerImpl 12.04.2021 05:55:01 -- Stopping mod
 INFO  info.magnolia.module.ModuleManagerImpl 12.04.2021 05:55:01 -- Stopping module dam
 INFO  info.magnolia.repository.DefaultRepositoryManager 12.04.2021 05:55:01 -- Shutting down JCR
 INFO  info.magnolia.jackrabbit.ProviderImpl 12.04.2021 05:55:01 -- Shutting down repository bound to 'magnoliaAuthor'
+=======
+>>>>>>> origin/qichao

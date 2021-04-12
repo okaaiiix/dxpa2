@@ -14,8 +14,15 @@
 [#if imgItemKey??]
     [#assign asset = damfn.getAsset(imgItemKey)!]
     [#if asset??]
-        [#assign assetRend = damfn.getRendition(asset, "2400x750")/]
-      <img class="d-block img-fluid" src="${assetRend.link}" alt=" ${asset.title!}">
+        [#assign assetRend = damfn.getRendition(asset, "240x180")/]
+      <img class="slide" src="${assetRend.link}" alt=" ${asset.title!}">
+      <style>
+      .slide{
+          width: 100%;
+          height: 450px;
+          display: block!important;
+      }
+      </style>
     [/#if]
 [/#if]
     <div class="carousel-caption d-none d-md-block">

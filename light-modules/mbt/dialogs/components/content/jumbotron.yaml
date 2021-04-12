@@ -12,7 +12,7 @@ form:
             value: ""
             label: No container
             selected: true
-
+      - !include:/mbt/includes/dialogs/fields/themeField.yaml
     - name: link
       fields:
         - !include:/mbt/includes/dialogs/fields/linkTextField.yaml

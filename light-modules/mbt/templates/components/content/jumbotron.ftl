@@ -13,18 +13,96 @@
   [#assign imgRef = damfn.getAssetLink(imgItemKey)!/]
 [/#if]
 
+<style>
+div.theme1 {
+}
+div.theme1 > h1 {
+  position: relative;
+  font: Roboto;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  width: 688px;
+  height: 37.39px;
+  color: #7A8FFF;
+}
+div.theme1 > hr {
+  border-top: 1px solid;
+  border-color: #7A8FFF;
+}
+div.theme1 > p {
+  position: relative;
+  width: 654px;
+  height: 151.89px;
+  left: 100px;
+  top: 0px;
 
+  font: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.05em;  
+  text-align: left;
+  color: #7A8FFF;
+}
+div.theme1 > a {
+  position: relative;
+  left: 250px;
+  bottom: 150px; 
+  color: #7A8FFF;
+  border: 2px solid;
+  border-color: #7A8FFF;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+div.theme2 {
+}
+div.theme2 > h1 {
+  font: Roboto;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.05em; 
+  color: #0A142F;
+}
+div.theme2 > hr {
+  border-top: 1px solid;
+  border-color: #0A142F;
+}
+div.theme2 > p {
+  font: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.05em;  
+  color: #0A142F;
+}
+div.theme2 > a {
+  color: #0A142F;
+  border: 2px solid;
+  border-color: #0A142F; 
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+</style>
 <div class="${content.containerWidth!"container"}">
 ${borderTop?then("<hr/>","")}
-<div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom}">
-  <h1 class="display-4">${title}</h1>
-  <p class="lead">${text}</p>
-  <hr class="my-4">
-  <p></p>
-  [#if hrefValue?has_content]
-    <a class="btn btn-${linkColor} btn-lg" href="${hrefValue}" role="button">${linkText}</a>
-  [/#if]
-</div>
+  <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} ${content.theme}">
+    <h1 class="display-4">${title}</h1>
+    <hr class="my-4">
+    <p class="lead">${text}</p>    
+    [#if hrefValue?has_content]
+      <a class="btn btn-${linkColor} btn-lg" href="${hrefValue}" role="button">${linkText}</a>
+    [/#if]
+  </div>
 ${borderBottom?then("<hr/>","")}
 
 </div>
