@@ -5,7 +5,7 @@ form:
       fields:
         - !include:/mbt/includes/dialogs/fields/titleField.yaml
           name: title
-          lablel: title
+          label: title
         - !include:/mbt/includes/dialogs/fields/titleField.yaml
           name: cardsubtitle
           label: cardsubtitle
