@@ -30,7 +30,7 @@ padding:0;
 }
 
 /* Sundar Pichai */
-.card.theme1> .card-header{
+.card.theme1>.row>.col-8> .card-header{
 color: #7A8FFF;
 font-family: Roboto;
 font-style: normal;
@@ -41,7 +41,7 @@ letter-spacing: 0.05em;
 
 }
 
-.theme1> .card-body > .cardh3{
+.theme1>.row>.col-8> .card-body > .cardh3{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -56,7 +56,7 @@ letter-spacing: 0.05em;
 
 
 /* “Wear your failures as a badge of honor.” */
-.theme1 > .card-body > .cardp{
+.theme1 >.row>.col-8> .card-body > .cardp{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -74,7 +74,6 @@ background: url(image.png);
 border-radius: 18px;
 width: 215px;
 height: 215px;
-display: block;
 }
 
 
@@ -150,25 +149,30 @@ border-radius: 18px;
 <div class="card   mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]"">
 
     [#if content.headerText?has_content]
+    <div class="row">
+        
+        <div class="col-8">
         <div class="card-header text-${alignment} carddiv">
         ${content.headerText!}
         </div>
     [/#if]
     <div class="card-body text-${alignmentBody} carddiv">
+        
         [#if content.cardsubtitle?has_content]<h3 class="card-subtitle cardh3">${content.cardsubtitle}</h3>[/#if]
-        <div class="col-6">
+        
         <div class="card-text cardp">${paraText!} </div>
         </div>
         [#if hrefValue?has_content]
         <a href="${hrefValue}" class="btn btn-${content.color!}">${linkText}</a>
         [/#if]
-        <div class="col">
+    </div>
+            <div class="col-4" style="margin: 0 auto;height: 100%;">
         [#if asset?has_content]
         [#assign assetRend = damfn.getRendition(asset, "240x180")/]
-            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}"style="position:absolute; TOP:-135px; LEFT:350px; WIDTH:150px; HEIGHT:150px;border-radius:75%;text-align: center;">
+            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}"style="margin-top: 25px; WIDTH:150px; HEIGHT:150px;border-radius:75%;text-align: center;">
         [/#if]
         </div>
-    </div>
+        </div>
     [#if content.footerText?has_content]
     <div class="card-footer text-muted text-${alignmentFooter} carddiv">
        ${content.footerText!}
