@@ -8,6 +8,8 @@ background:transparent;
 .card-header {
     background:transparent;
 }
+
+
 </style>
 
 <div class="card">

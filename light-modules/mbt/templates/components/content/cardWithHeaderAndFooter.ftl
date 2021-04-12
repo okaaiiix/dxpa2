@@ -1,3 +1,5 @@
+[#assign page = cmsfn.page(content)!]
+
 [#include "/mbt/templates/macros/commons.ftl"/]
 [@assignSpacingAndBorders content/]
 [#assign paraText =  cmsfn.decode(content).text!/]
@@ -145,7 +147,7 @@ border-radius: 18px;
 
 
 
-<div class="card ${content.theme}  mt-${marginTop} mb-${marginBottom}">
+<div class="card   mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]"">
 
     [#if content.headerText?has_content]
         <div class="card-header text-${alignment} carddiv">

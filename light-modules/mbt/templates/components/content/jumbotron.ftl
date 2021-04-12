@@ -6,7 +6,7 @@
 [#assign linkColor = content.linkColor!"primary"]
 [#assign imgItemKey = content.image!/]
 [#include "/mbt/templates/macros/linksSwitchable.ftl"]
-
+[#assign page = cmsfn.page(content)!]
 [@assignLink content "linkType"/]
 
 [#if imgItemKey??]
@@ -96,7 +96,7 @@
 </style>
 <div class="${content.containerWidth!"container"}">
 ${borderTop?then("<hr/>","")}
-  <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} ${content.theme}">
+  <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]">
     <h1 class="display-4 jumboh1">${title}</h1>
     <hr class="my-4">
     <p class="lead">${text}</p>    

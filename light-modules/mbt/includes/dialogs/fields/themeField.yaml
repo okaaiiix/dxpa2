@@ -14,3 +14,6 @@ options:
   - name: theme3
     value: theme3
     label: theme3
+  - name: notheme
+    value: notheme
+    label: notheme
