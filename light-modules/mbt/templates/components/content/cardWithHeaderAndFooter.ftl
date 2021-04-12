@@ -154,14 +154,18 @@ border-radius: 18px;
     [/#if]
     <div class="card-body text-${alignmentBody} carddiv">
         [#if content.cardsubtitle?has_content]<h3 class="card-subtitle cardh3">${content.cardsubtitle}</h3>[/#if]
+        <div class="col-6">
         <div class="card-text cardp">${paraText!} </div>
+        </div>
         [#if hrefValue?has_content]
         <a href="${hrefValue}" class="btn btn-${content.color!}">${linkText}</a>
         [/#if]
+        <div class="col">
         [#if asset?has_content]
         [#assign assetRend = damfn.getRendition(asset, "240x180")/]
-            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}"style="position:absolute; TOP:35px; LEFT:350px; WIDTH:150px; HEIGHT:150px">
+            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}"style="position:absolute; TOP:-135px; LEFT:350px; WIDTH:150px; HEIGHT:150px;border-radius:75%;text-align: center;">
         [/#if]
+        </div>
     </div>
     [#if content.footerText?has_content]
     <div class="card-footer text-muted text-${alignmentFooter} carddiv">
@@ -169,3 +173,5 @@ border-radius: 18px;
     </div>
     [/#if]
 </div>
+
+  
