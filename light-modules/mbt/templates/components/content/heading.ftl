@@ -1,3 +1,4 @@
+[#assign page = cmsfn.page(content)!]
 [#include "/mbt/templates/macros/commons.ftl"/]
 [@assignSpacingAndBorders content/]
 [#assign badgeText = content.badgeText!/]
@@ -69,7 +70,7 @@
 <div class="${content.containerWidth!""} mt-${marginTop} mb-${marginBottom}">
 ${borderTop?then("<hr/>","")}
     [#if content.title?has_content]
-        <div class="heading row text-${content.alignment!} ${content.theme}">
+        <div class="heading row text-${content.alignment!} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]"">
             <h2 class="headingh2 col-12">${content.title!}[#if badgeText?has_content]<span class="badge badge-${content.color!} ml-1">${badgeText!}</span>[/#if]</h${headingLevel!}>
             [#if content.text?has_content]<div class="col-12 headingdiv"> ${cmsfn.decode(content).text!}</div>[/#if]
         </div>

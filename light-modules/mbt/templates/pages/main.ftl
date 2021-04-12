@@ -11,6 +11,7 @@
     [@cms.area name="htmlHeader"/]
   </head>
     <body>
+    [#assign pagetheme = content.pagetheme]
     [@cms.area name="footer"/]
     [@cms.area name="navigation"/]
     [@cms.area name="breadcrumb"/]

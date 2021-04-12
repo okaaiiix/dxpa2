@@ -16,6 +16,8 @@ form:
           class: info.magnolia.ui.form.field.definition.TextFieldDefinition
           i18n: true
           label: window title
+        - !include:/mbt/includes/dialogs/fields/themeField.yaml
+          name: pagetheme
         - name: hideInNav
           class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
           defaultValue: false

@@ -1,3 +1,4 @@
+[#assign page = cmsfn.page(content)!]
 <style>
 .title {
     font-size:48px;
@@ -14,4 +15,4 @@
 }
 </style>
 
-<h1 class="title text-${content.alignment!} ${content.theme}"> ${content.title}</h1>
+<h1 class="title text-${content.alignment!} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]"> ${content.title}</h1>
