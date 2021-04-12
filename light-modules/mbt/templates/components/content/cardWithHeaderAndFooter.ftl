@@ -137,7 +137,7 @@ border-radius: 18px;
 
 </style>
 
-
+[#assign imgItemKey = content.image!]
 
 <div class="card ${content.theme}  mt-${marginTop} mb-${marginBottom}">
 
@@ -158,8 +158,13 @@ border-radius: 18px;
     <div class="card-footer text-muted text-${alignmentFooter} carddiv">
        ${content.footerText!}
     </div>
-    <div class="img">
-    <img class="${content.img} cardimg" />
+    [#if imgItemKey??]
+    [#assign asset = damfn.getAsset(imgItemKey)!]
+    [#if asset??]
+        [#assign assetRend = damfn.getRendition(asset, "240x180")/]
+      <img class="" src="${assetRend.link}" alt=" ${asset.title!}">
+    [/#if]
+[/#if]
     <script>console.log(${content.img})</script>
     </div>
     [/#if]

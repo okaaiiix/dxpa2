@@ -14,9 +14,10 @@
 [/#if]
 
 <style>
-div.theme1 {
+.jumbotron.theme1 {
+  background-color: #FFFFFF ;
 }
-div.theme1 > h1 {
+.jumbotron.theme1 > h1 {
   position: relative;
   font: Roboto;
   font-size: 48px;
@@ -27,11 +28,11 @@ div.theme1 > h1 {
   height: 37.39px;
   color: #7A8FFF;
 }
-div.theme1 > hr {
+.jumbotron.theme1 > hr {
   border-top: 1px solid;
   border-color: #7A8FFF;
 }
-div.theme1 > p {
+.jumbotron.theme1 > p {
   position: relative;
   width: 654px;
   height: 151.89px;
@@ -46,7 +47,7 @@ div.theme1 > p {
   text-align: left;
   color: #7A8FFF;
 }
-div.theme1 > a {
+.jumbotron.theme1 > a {
   position: relative;
   left: 250px;
   bottom: 150px; 
@@ -59,9 +60,9 @@ div.theme1 > a {
   padding-right: 40px;
 }
 
-div.theme2 {
+.jumbotron.theme2 {
 }
-div.theme2 > h1 {
+.jumbotron.theme2 > h1 {
   font: Roboto;
   font-size: 48px;
   font-weight: 300;
@@ -69,11 +70,11 @@ div.theme2 > h1 {
   letter-spacing: 0.05em; 
   color: #0A142F;
 }
-div.theme2 > hr {
+.jumbotron.theme2 > hr {
   border-top: 1px solid;
   border-color: #0A142F;
 }
-div.theme2 > p {
+.jumbotron.theme2 > p {
   font: Roboto;
   font-size: 24px;
   font-weight: 300;
@@ -81,7 +82,7 @@ div.theme2 > p {
   letter-spacing: 0.05em;  
   color: #0A142F;
 }
-div.theme2 > a {
+.jumbotron.theme2 > a {
   color: #0A142F;
   border: 2px solid;
   border-color: #0A142F; 
@@ -96,7 +97,7 @@ div.theme2 > a {
 <div class="${content.containerWidth!"container"}">
 ${borderTop?then("<hr/>","")}
   <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} ${content.theme}">
-    <h1 class="display-4">${title}</h1>
+    <h1 class="display-4 jumboh1">${title}</h1>
     <hr class="my-4">
     <p class="lead">${text}</p>    
     [#if hrefValue?has_content]
