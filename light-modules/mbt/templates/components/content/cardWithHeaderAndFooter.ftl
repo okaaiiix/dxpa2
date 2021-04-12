@@ -5,7 +5,13 @@
 [#assign alignmentBody = content.alignmentBody!""/]
 [#assign alignmentFooter = content.alignmentFooter!""/]
 [#include "/mbt/templates/macros/linksSwitchable.ftl"]
-
+[#assign imgItemKey = content.image!/]
+[#if imgItemKey?has_content]
+    [#assign imgAsset = damfn.getAsset(imgItemKey)!/]
+    [#if imgAsset?has_content]
+        [#assign assetRend = damfn.getRendition(imgAsset, "1600")/]
+    [/#if]
+[/#if]
 [@assignLink content "linkType"/]
 <style>
 
@@ -137,7 +143,7 @@ border-radius: 18px;
 
 </style>
 
-[#assign imgItemKey = content.image!]
+
 
 <div class="card ${content.theme}  mt-${marginTop} mb-${marginBottom}">
 
@@ -158,8 +164,7 @@ border-radius: 18px;
     <div class="card-footer text-muted text-${alignmentFooter} carddiv">
        ${content.footerText!}
     </div>
-    [#if imgItemKey??]
-    [#assign asset = damfn.getAsset(imgItemKey)!]
+
     [#if asset??]
         [#assign assetRend = damfn.getRendition(asset, "240x180")/]
       <img class="" src="${assetRend.link}" alt=" ${asset.title!}">
