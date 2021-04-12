@@ -162,7 +162,7 @@ border-radius: 18px;
         [/#if]
         [#if asset?has_content]
         [#assign assetRend = damfn.getRendition(asset, "240x180")/]
-            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}">
+            <img class="cardImage" src="${assetRend.link}" alt=" ${asset.title!}"style="position:absolute; TOP:35px; LEFT:350px; WIDTH:150px; HEIGHT:150px">
         [/#if]
     </div>
     [#if content.footerText?has_content]
