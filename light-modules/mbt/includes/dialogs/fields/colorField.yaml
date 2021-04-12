@@ -1,4 +1,5 @@
 name: color
+label: Color
 fieldType: select
 sortOptions: false
 class: info.magnolia.ui.form.field.definition.SelectFieldDefinition

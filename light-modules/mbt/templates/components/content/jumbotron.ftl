@@ -15,9 +15,9 @@
 
 <style>
 .jumbotron.theme1 {
-  background-color: #FFFFFF ;
+  background-color: #7A8FFF;
 }
-.jumbotron.theme1 > h1 {
+.jumbotron.theme1 > .jumboh1 {
   position: relative;
   font: Roboto;
   font-size: 48px;
@@ -26,13 +26,13 @@
   letter-spacing: 0.05em;
   width: 688px;
   height: 37.39px;
-  color: #7A8FFF;
+  color: #FFFFFF;
 }
-.jumbotron.theme1 > hr {
+.jumbotron.theme1 > .jumbohr {
   border-top: 1px solid;
-  border-color: #7A8FFF;
+  border-color: #FFFFFF;
 }
-.jumbotron.theme1 > p {
+.jumbotron.theme1 > .jumbop {
   position: relative;
   width: 654px;
   height: 151.89px;
@@ -45,13 +45,14 @@
   line-height: 40px;
   letter-spacing: 0.05em;  
   text-align: left;
-  color: #7A8FFF;
+  color: #FFFFFF;
 }
-.jumbotron.theme1 > a {
+.jumbotron.theme1 > .btn {
   position: relative;
   left: 250px;
   bottom: 150px; 
   color: #7A8FFF;
+  background-color: #FFFFFF;
   border: 2px solid;
   border-color: #7A8FFF;
   padding-top: 20px;
@@ -61,31 +62,33 @@
 }
 
 .jumbotron.theme2 {
+  background-color: #0A142F;
 }
-.jumbotron.theme2 > h1 {
+.jumbotron.theme2 > .jumboh1 {
   font: Roboto;
   font-size: 48px;
   font-weight: 300;
   line-height: 20px;
   letter-spacing: 0.05em; 
-  color: #0A142F;
+  color: #FFFFFF;
 }
-.jumbotron.theme2 > hr {
+.jumbotron.theme2 > .jumbohr {
   border-top: 1px solid;
-  border-color: #0A142F;
+  border-color: #FFFFFF;
 }
-.jumbotron.theme2 > p {
+.jumbotron.theme2 > .jumbop {
   font: Roboto;
   font-size: 24px;
   font-weight: 300;
   line-height: 40px;
   letter-spacing: 0.05em;  
-  color: #0A142F;
+  color: #FFFFFF;
 }
-.jumbotron.theme2 > a {
+.jumbotron.theme2 > .btn {
   color: #0A142F;
   border: 2px solid;
   border-color: #0A142F; 
+  background-color: #FFFFFF;
   border-radius: 10px;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -98,8 +101,8 @@
 ${borderTop?then("<hr/>","")}
   <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]">
     <h1 class="display-4 jumboh1">${title}</h1>
-    <hr class="my-4">
-    <p class="lead">${text}</p>    
+    <hr class="my-4 jumbohr">
+    <p class="lead jumbop">${text}</p>    
     [#if hrefValue?has_content]
       <a class="btn btn-${linkColor} btn-lg" href="${hrefValue}" role="button">${linkText}</a>
     [/#if]

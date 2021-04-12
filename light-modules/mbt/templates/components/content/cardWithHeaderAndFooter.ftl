@@ -97,7 +97,7 @@ border-radius: 40px;
 
 
 /* Sundar Pichai */
-.card.theme2> .card-header{
+.card.theme2> .row>.col-8> .card-header{
 color: #FFFFFF;
 font-family: Roboto;
 font-style: normal;
@@ -108,7 +108,7 @@ letter-spacing: 0.05em;
 
 }
 
-.theme2> .card-body > .cardh3{
+.theme2>.row>.col-8 .card-body > .cardh3{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -123,7 +123,7 @@ letter-spacing: 0.05em;
 
 
 /* “Wear your failures as a badge of honor.” */
-.theme2 > .card-body > .cardp{
+.theme2 >.row>.col-8> .card-body > .cardp{
 font-family: Roboto;
 font-style: normal;
 font-weight: normal;
@@ -136,10 +136,12 @@ color: #9D9D9D;
 
 
 /* image 4 */
-.theme2 >img{
+.card.theme2 >.carddiv > .cardImage{
 
 background: url(image.png);
 border-radius: 18px;
+width: 215px;
+height: 215px;
 }
 
 </style>
