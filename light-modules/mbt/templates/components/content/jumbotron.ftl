@@ -95,11 +95,57 @@
   padding-left: 40px;
   padding-right: 40px;
 }
+.jumbotron.theme3 {
+  background-color: #FFFFFF;
+}
+
+.jumbotron.theme3 > .theme3hr{
+  border-top: 1px solid;
+  border-color: #646464;
+  width: 577px;   
+}
+.jumbotron.theme3 > .jumboh1{
+  font: Roboto;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.05em; 
+  color: #3A3A3A;  
+}
+.jumbotron.theme3 > .jumbohr {
+  border-top: 1px solid;
+  border-color: #646464;
+  width: 577px; 
+}
+.jumbotron.theme3 > .jumbop {
+  font: Roboto;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: 0.05em;  
+  color: #454545;  
+}
+.jumbotron.theme3 > .btn{
+  color: #0A142F;
+  border: 2px solid;
+  border-color: #BEBEBE; 
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 </style>
 <div class="${content.containerWidth!"container"}">
 ${borderTop?then("<hr/>","")}
-  <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]">
+  <div class="jumbotron  text-center bg-${bgColor!} mt-${marginTop} mb-${marginBottom} [#if content.theme?has_content][#if content.theme=="notheme"]${page.pagetheme}[#else]${content.theme}[/#if][#else]${page.pagetheme}[/#if]"> 
+    [#if content.theme == "theme3"]
+      <hr class="my-4 theme3hr">
+    [#elseif page.pagetheme == "theme3"]
+      <hr class="my-4 theme3hr">
+    [/#if]  
     <h1 class="display-4 jumboh1">${title}</h1>
     <hr class="my-4 jumbohr">
     <p class="lead jumbop">${text}</p>    

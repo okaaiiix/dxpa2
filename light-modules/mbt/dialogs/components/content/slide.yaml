@@ -9,13 +9,17 @@ form:
       label: tabs.tabStyle
       fields:
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
+          label: title color
           name: titleColor
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
+          label: title background color
           name: titleBgColor
 
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
+          label: text color
           name: textColor
         - !include:/mbt/includes/dialogs/fields/colorField.yaml
+          label: text background color
           name: textBgColor
 
 

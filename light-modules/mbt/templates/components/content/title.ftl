@@ -4,14 +4,18 @@
     font-size:48px;
     font-weight: 100;
     letter-spacing: 2.4px;
+    font: Roboto;
 }
 
 .title.theme1 {
-    color: #D8D8D8;
+    color: #7A8FFF;
 }
 
 .title.theme2 {
     color: #0A124F;
+}
+.title.theme3 {
+    color: #2E2E2E;
 }
 </style>
 

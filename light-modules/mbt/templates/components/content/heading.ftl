@@ -63,7 +63,7 @@
 }
 
 .theme3{
-    background-color: green;
+    background-color: #FFFFFF;
 }
 </style>
 

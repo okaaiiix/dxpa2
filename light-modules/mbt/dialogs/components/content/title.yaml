@@ -5,7 +5,6 @@ form:
       fields:
         - !include:/mbt/includes/dialogs/fields/titleField.yaml
           - name: title
-        - !include:/mbt/includes/dialogs/fields/themeField.yaml
         - !include:/mbt/includes/dialogs/fields/headingSizeField.yaml
         - !include:/mbt/includes/dialogs/fields/alignmentField.yaml
         - !include:/mbt/includes/dialogs/fields/richTextField.yaml
@@ -17,6 +16,7 @@ form:
               selected: true
         - !include:/mbt/includes/dialogs/fields/themeField.yaml
     - name: tabBadge
+      label: Badge
       fields:
         - !include:/mbt/includes/dialogs/fields/titleField.yaml
           name: badgeText
