@@ -144,6 +144,72 @@ width: 215px;
 height: 215px;
 }
 
+/* CEO Card */
+.card.theme3{
+border-radius: 40px;
+background: #FFFFFF;
+padding: 20px;
+font: Roboto;
+}
+
+
+
+/* Rectangle 9 */
+.theme3 > .carddiv{
+
+background: transparent;
+border-radius: 40px;
+}
+
+
+/* Sundar Pichai */
+.card.theme3> .row>.col-8> .card-header{
+color: #2B2B2B;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 40px;
+letter-spacing: 0.05em;
+
+}
+
+.theme3>.row>.col-8 .card-body > .cardh3{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+color: #A8A8A8;
+line-height: 40px;
+
+/* or 133% */
+
+letter-spacing: 0.05em;
+}
+
+
+/* “Wear your failures as a badge of honor.” */
+.theme3 >.row>.col-8> .card-body > .cardp{
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 0.05em;
+color: #9D9D9D;
+}
+
+
+
+/* image 4 */
+.card.theme3 >.carddiv > .cardImage{
+
+background: url(image.png);
+border-radius: 18px;
+width: 215px;
+height: 215px;
+}
+
 </style>
 
 
