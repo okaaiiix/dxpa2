@@ -62,8 +62,32 @@
     word-spacing:2px;
 }
 
-.theme3{
-    background-color: #FFFFFF;
+.heading.theme3{
+    background-color: transparent;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font: Roboto;
+}
+
+.theme3 > .headingh2 {
+    font-weight: 400;
+    font-size: 64px;
+    color: #4E4E4E;
+    text-transform: uppercase;   
+    text-decoration: underline 4px;
+    word-spacing: 5px;
+    text-underline-offset: 5px;
+}
+
+.theme3 > .headingdiv {
+    font-size: 36px;
+    font-weight:400;
+    padding-top: 2%;
+    padding-left: 20%;
+    padding-right: 20%;
+    word-spacing:2px;
+    color: #585858;
 }
 </style>
 

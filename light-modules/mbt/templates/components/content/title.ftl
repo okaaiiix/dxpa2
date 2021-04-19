@@ -15,7 +15,9 @@
     color: #0A124F;
 }
 .title.theme3 {
-    color: #2E2E2E;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #555555;
 }
 </style>
 
