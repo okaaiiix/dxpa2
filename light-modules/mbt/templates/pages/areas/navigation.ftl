@@ -1,4 +1,5 @@
 [#assign siteRoot  = cmsfn.siteRoot(content)/]
+[#assign page = cmsfn.page(content)!]
 [#assign navPages = navfn.navItems(siteRoot)/]
 [#assign brandType = siteRoot.brand!"text"/]
 
@@ -15,6 +16,71 @@
 [/#if]
 [#-- BRAND ASSIGNMENT END --]
 
+<style>
+/* --- THEME 1 --- */
+.navbar.theme1 {
+    background-color:#7A8FFF!important;
+    color: #F0F0F0!important;
+}
+
+.navbar.theme1>.navbar-collapse>.navbar-nav>.nav-item>.nav-link {
+    color: #F0F0F0!important;
+}
+
+.navbar.theme1>.navbar-collapse>form>.btn {
+    color: #F0F0F0!important;
+    border-color: #F0F0F0!important;
+}
+
+.navbar.theme1>.navbar-collapse>form>.btn:hover,.navbar.theme1>.navbar-collapse>form>.btn:focus,.navbar.theme1>.navbar-collapse>form>.btn:active {
+    color: #7A8FFF!important;
+    background-color: #F0F0F0!important;
+    border-color: #F0F0F0!important;
+}
+
+/* --- THEME 2 --- */
+.navbar.theme2 {
+    background-color:#0A124F!important;
+    color: #F0F0F0!important;
+}
+
+.navbar.theme2>.navbar-collapse>.navbar-nav>.nav-item>.nav-link {
+    color: #F0F0F0!important;
+}
+
+.navbar.theme2>.navbar-collapse>form>.btn {
+    color: #F0F0F0!important;
+    border-color: #F0F0F0!important;
+}
+
+.navbar.theme2>.navbar-collapse>form>.btn:hover,.navbar.theme2>.navbar-collapse>form>.btn:focus,.navbar.theme2>.navbar-collapse>form>.btn:active {
+    color: #0A124F!important;
+    background-color: #F0F0F0!important;
+    border-color: #F0F0F0!important;
+}
+
+/* --- THEME 3 --- */
+.navbar.theme3 {
+    background-color:#FFFFFF!important;
+    color: #C2C2C2!important;
+}
+
+.navbar.theme3>.navbar-collapse>.navbar-nav>.nav-item>.nav-link {
+    color: #C2C2C2!important;
+}
+
+.navbar.theme3>.navbar-collapse>form>.btn {
+    color: #262626!important;
+    border-color: #262626!important;
+}
+
+.navbar.theme3>.navbar-collapse>form>.btn:hover,.navbar.theme3>.navbar-collapse>form>.btn:focus,.navbar.theme3>.navbar-collapse>form>.btn:active {
+    color: #FFFFFF!important;
+    background-color: #262626!important;
+    border-color: #262626!important;
+}
+</style>
+
 
 [#assign layoutStyle = siteRoot.containerWidth!"container"/]
 [#assign fixedTop = siteRoot.fixedTop!false/]
@@ -26,7 +92,7 @@
 [/#if]
 
 <div class="${layoutStyle} ${fixedTop?then("pb-5", "")}">
-<nav class="navbar ${fixedTop?then("fixed-top", "")} navbar-expand-lg navbar-${navbarColor} bg-${bgColor!}">
+<nav class="navbar ${fixedTop?then("fixed-top", "")} navbar-expand-lg navbar-${navbarColor} bg-${bgColor!} ${page.pagetheme}">
     <a class="navbar-brand" href="#">[#if brandType == "text"]${brandText}[#else]<img src="${imageURL}" alt="${altText!}"/> [/#if]</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
